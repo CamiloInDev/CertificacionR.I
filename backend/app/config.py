@@ -1,0 +1,20 @@
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Settings(BaseSettings):
+    app_name: str = "R.I Certificación API"
+    app_version: str = "1.0.0"
+    debug: bool = True
+
+    smtp_host: str = "smtp.gmail.com"
+    smtp_port: int = 587
+    smtp_user: str = ""
+    smtp_password: str = ""
+    email_to: str = "comercial@ricertificacion.com"
+
+    cors_origins: list[str] = ["http://localhost:5173", "http://localhost:3000"]
+
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+
+
+settings = Settings()

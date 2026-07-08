@@ -1,0 +1,9 @@
+{
+  "name": "ricertificacion",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "dev:be": "uvicorn app.main:app --reload --app-dir backend",
+    "build": "npm run build --prefix frontend"
+  }
+}

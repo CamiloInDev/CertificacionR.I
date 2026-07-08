@@ -1,0 +1,29 @@
+{
+  "url": "https://ricertificacion.com/",
+  "title": "R.I Certificación",
+  "description": "Grupo R.I. - Evaluación de competencias y aseguramiento de levantamiento Mecánico de Cargas para equipos y personas",
+  "language": "es",
+  "platform": "WordPress 6.8.1",
+  "theme": "Neve 4.1.2",
+  "pageBuilder": "Elementor 3.30.1",
+  "documentPath": "./import-work",
+  "screenshot": "./import-work/screenshot.png",
+  "cleanedHtml": "./import-work/cleaned.html",
+  "images": {
+    "heroBg": "https://ricertificacion.com/wp-content/uploads/2021/09/fondo_cert.jpg",
+    "iconPersonas": "https://ricertificacion.com/wp-content/uploads/2021/09/1.png",
+    "iconEquipos": "https://ricertificacion.com/wp-content/uploads/2021/11/3.png",
+    "iconAcreditaciones": "https://ricertificacion.com/wp-content/uploads/2021/09/2.png",
+    "aboutImage": "https://ricertificacion.com/wp-content/uploads/2021/09/1-1.png",
+    "certificateImage": "https://ricertificacion.com/wp-content/uploads/2021/09/imagen-certificado4.jpg",
+    "politicasImage": "https://ricertificacion.com/wp-content/uploads/2021/09/foto_politicas-1024x754.jpg",
+    "quejaImage": "https://ricertificacion.com/wp-content/uploads/2021/09/IMG-20210915-WA0002-841x1024.jpg",
+    "iconAddress": "https://ricertificacion.com/wp-content/uploads/2021/09/icono6.png",
+    "iconPhone": "https://ricertificacion.com/wp-content/uploads/2021/09/icono4.png",
+    "iconEmail": "https://ricertificacion.com/wp-content/uploads/2021/09/icono5.png"
+  },
+  "brochures": {
+    "personas": "https://ricertificacion.com/wp-content/uploads/2023/10/BROCHURE-RI-CERTIFICACION-SECCION-PERSONAS-2023.pdf",
+    "inspeccion": "https://ricertificacion.com/wp-content/uploads/2023/10/BROCHURE-RI-CERTIFICACION-E-INSPECCION-2023.pdf"
+  }
+}
