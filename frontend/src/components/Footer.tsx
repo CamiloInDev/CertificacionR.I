@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-300">
               <li>Calle 85 No. 24 - 39</li>
               <li>Bogotá - Colombia</li>
-              <li>Tel: (601) 6358147</li>
+              <li>Tel / WhatsApp: (+57) 314 218 3837</li>
               <li>comercial@ricertificacion.com</li>
             </ul>
           </div>
