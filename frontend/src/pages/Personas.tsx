@@ -9,6 +9,7 @@ export default function Personas() {
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 safety-stripe">Certificación de Personas</h1>
           <p className="text-gray-200 max-w-3xl mt-6 leading-relaxed">
+            Contamos con acreditación ONAC, vigente a la fecha, con código de acreditación 13-OCP-005 bajo la norma ISO/IEC 17024:2012.
             Las actividades para que un organismo de certificación determine que una persona cumple los requisitos
             de certificación, que incluye la solicitud, la evaluación, la decisión de certificación, la renovación
             y el uso de certificados y logotipos/marcas.
