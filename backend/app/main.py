@@ -20,6 +20,10 @@ app.add_middleware(
 app.include_router(health.router)
 app.include_router(contact.router)
 
+@app.get("/ping")
+async def ping():
+    return {"status": "ok"}
+
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "static"
 if FRONTEND_DIR.exists():
     assets_dir = FRONTEND_DIR / "assets"
