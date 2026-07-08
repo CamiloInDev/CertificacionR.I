@@ -1,6 +1,8 @@
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from fastapi.staticfiles import StaticFiles
 from app.config import settings
 from app.routers import health, contact
 
@@ -16,3 +18,7 @@ app.add_middleware(
 
 app.include_router(health.router)
 app.include_router(contact.router)
+
+STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
+if STATIC_DIR.exists():
+    app.mount("/", StaticFiles(directory=str(STATIC_DIR), html=True), name="static")

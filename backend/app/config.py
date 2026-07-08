@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     smtp_password: str = ""
     email_to: str = "comercial@ricertificacion.com"
 
-    cors_origins: list[str] = ["http://localhost:5173", "http://localhost:3000"]
+    cors_origins: list[str] = ["*"]
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
