@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 interface EquipoImg {
@@ -162,6 +163,18 @@ export default function Equipos1() {
               Descargar Procedimiento
             </a>
           </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+          <Link
+            to="/consulta-certificados/inspecciones"
+            className="inline-flex items-center gap-2 bg-secondary text-primary font-bold px-8 py-3.5 rounded-full hover:bg-secondary-light transition-colors text-sm"
+          >
+            Consultar Certificados de Inspección
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </section>
     </div>

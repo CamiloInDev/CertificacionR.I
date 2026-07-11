@@ -52,6 +52,18 @@ export default function Personas() {
             </motion.div>
           ))}
         </div>
+
+        <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+          <Link
+            to="/consulta-certificados/personas"
+            className="inline-flex items-center gap-2 bg-secondary text-primary font-bold px-8 py-3.5 rounded-full hover:bg-secondary-light transition-colors text-sm"
+          >
+            Consultar Certificados de Personas
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
       </section>
     </div>
   )

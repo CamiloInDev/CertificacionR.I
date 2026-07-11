@@ -7,7 +7,8 @@ import Equipos1 from './pages/Equipos1'
 import Conozcanos from './pages/Conozcanos'
 import Politicas from './pages/Politicas'
 import Quejas from './pages/Quejas'
-import ConsultaCertificados from './pages/ConsultaCertificados'
+import ConsultaCertificadosPersonas from './pages/ConsultaCertificadosPersonas'
+import ConsultaCertificadosInspecciones from './pages/ConsultaCertificadosInspecciones'
 
 export default function App() {
   return (
@@ -21,7 +22,8 @@ export default function App() {
           <Route path="/conozcanos" element={<Conozcanos />} />
           <Route path="/politicas" element={<Politicas />} />
           <Route path="/quejas" element={<Quejas />} />
-          <Route path="/consulta-certificados" element={<ConsultaCertificados />} />
+          <Route path="/consulta-certificados/personas" element={<ConsultaCertificadosPersonas />} />
+          <Route path="/consulta-certificados/inspecciones" element={<ConsultaCertificadosInspecciones />} />
         </Route>
       </Routes>
     </BrowserRouter>

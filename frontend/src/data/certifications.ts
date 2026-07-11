@@ -38,7 +38,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en aparejamiento de cargas.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de aparejador señalero de cargas\n- Entregar certificado laboral evidenciando experiencia como aparejador de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en aparejamiento de cargas.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de aparejador señalero de cargas\n- Entregar certificado laboral evidenciando experiencia como aparejador de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en aparejamiento de cargas en izaje de por lo menos 8 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -77,7 +77,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de brazo articulado\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de brazo articulado\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en operación del equipo de por lo menos 8 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -117,7 +117,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de cargador frontal\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de cargador frontal\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en operación del equipo de por lo menos 8 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -157,7 +157,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de grúa móvil\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de grúa móvil\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en operación del equipo de por lo menos 16 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -204,7 +204,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de manlift\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de manlift\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en operación del equipo de por lo menos 8 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -244,7 +244,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de montacargas Todo Terreno y Telehandler\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de montacargas Todo Terreno y Telehandler\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en operación del equipo de por lo menos 8 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -284,7 +284,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de montacargas y apiladores\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de montacargas y apiladores\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en operación del equipo de por lo menos 8 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -325,7 +325,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de puente grúa / grúa pórtico\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de puente grúa / grúa pórtico\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en operación del equipo de por lo menos 4 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -364,7 +364,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en supervisión de izaje.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de Supervisor de izaje\n- Entregar certificado laboral evidenciando experiencia como supervisor de izaje de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en supervisión de izaje.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de Supervisor de izaje\n- Entregar certificado laboral evidenciando experiencia como supervisor de izaje de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en supervisión izaje de por lo menos 8 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -403,7 +403,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 18 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de winche\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Certificado anterior emitido por RI CERTIFICACION en el alcance de operador de winche\n- Entregar certificado laboral evidenciando experiencia como operador del equipo de mínimo 6 meses\n- Copia de un certificado de un curso de formación práctica en operación del equipo de por lo menos 8 horas\n- Copia de certificado expedido por cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
       },
@@ -442,7 +442,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 20 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Entregar certificado laboral evidenciando experiencia como conductor de vehículo liviano\n- Copia de certificado de curso de capacitación teórico práctica', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Entregar certificado laboral evidenciando experiencia como conductor de vehículo liviano\n- Copia de certificado de curso de capacitación teórico práctica en conducción de vehículos expedido por un centro de enseñanza donde se relacione la categoría y las horas recibidas\n- Copia de certificado vigente expedido por RI Certificación o cualquier organismo de certificación acreditado ante la ONAC en el alcance para el cual está aplicando.\n*Para certificado laboral máximo 6 meses después de emisión.\n**Curso de formación máximo 1 año después de emisión.\n***Certificado ONAC 6 meses máximo posterior a finalizar la vigencia.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Poseer licencia de conducción vigente de la categoría en la cual se va a certificar', 'Entregar una copia de la licencia de conducción vigente en la categoría a la que se presenta.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],

@@ -66,7 +66,7 @@ export default function CertificationDetail() {
                   {group.rows.map((row, ri) => (
                     <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                       {row.map((cell, ci) => (
-                        <td key={ci} className="p-3 border-t border-gray-200 text-gray-700">
+                        <td key={ci} className="p-3 border-t border-gray-200 text-gray-700 whitespace-pre-wrap">
                           {cell}
                         </td>
                       ))}
