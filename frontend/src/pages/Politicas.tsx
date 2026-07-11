@@ -5,7 +5,7 @@ interface Policy {
   label: string
   code: string
   version: string
-  content: JSX.Element
+  content: React.ReactNode
 }
 
 const policies: Policy[] = [
