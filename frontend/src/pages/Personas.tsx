@@ -27,6 +27,33 @@ export default function Personas() {
           </p>
         </div>
 
+        <div className="bg-gradient-to-br from-primary to-[#0d2f5e] text-white rounded-lg shadow-md p-6 md:p-8 mb-10 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
+          <div className="hidden md:flex items-center justify-center w-14 h-14 bg-white/15 rounded-full shrink-0">
+            <svg className="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11v4m0 0l-2-2m2 2l2-2" />
+            </svg>
+          </div>
+          <div className="flex-1">
+            <h3 className="text-lg font-bold safety-stripe">Procedimiento de Certificación de Personas</h3>
+            <p className="text-gray-300 text-sm mt-1 leading-relaxed">
+              Descarga el documento donde se describe el procedimiento completo para la certificación de personas,
+              incluyendo solicitud, evaluación, decisión y renovación.
+            </p>
+          </div>
+          <a
+            href="/static/brochures/CP-PR-011-Certificacion-de-personas-V.16.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-secondary text-primary font-bold px-6 py-2.5 rounded hover:bg-secondary-light transition-colors text-sm shrink-0"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Descargar PDF
+          </a>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, i) => (
             <motion.div

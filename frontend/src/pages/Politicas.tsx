@@ -401,7 +401,7 @@ export default function Politicas() {
             bajo la norma ISO/IEC 17024.
           </p>
           <a
-            href="/static/brochures/CP-RG-001-Reglamento-Certificacion.pdf"
+            href="/static/brochures/CP-RG-001-Reglamento-de-Certificacion-V.22.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-secondary text-primary font-bold px-6 py-2 rounded hover:bg-secondary-light transition-colors text-sm"
