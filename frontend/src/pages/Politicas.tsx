@@ -317,17 +317,41 @@ export default function Politicas() {
             </div>
           </a>
 
-          <div className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow">
-            <p className="font-bold text-sm text-primary leading-snug">
-              CP-PR-011 Certificación de personas V.16
-            </p>
-          </div>
+          <a
+            href="/static/brochures/CP-PR-011-Certificacion-de-personas-V.16.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
+          >
+            <img
+              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
+              alt="PDF"
+              className="w-10 h-10 shrink-0 mt-1"
+            />
+            <div>
+              <p className="font-bold text-sm text-primary leading-snug">
+                CP-PR-011 Certificación de personas V.16
+              </p>
+            </div>
+          </a>
 
-          <div className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow">
-            <p className="font-bold text-sm text-primary leading-snug">
-              Procedimiento Quejas y Apelaciones V.08 2023-07-14
-            </p>
-          </div>
+          <a
+            href="/static/brochures/CP-PR-016-Quejas-y-apelaciones-V.08_2023-07-14.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
+          >
+            <img
+              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
+              alt="PDF"
+              className="w-10 h-10 shrink-0 mt-1"
+            />
+            <div>
+              <p className="font-bold text-sm text-primary leading-snug">
+                Procedimiento Quejas y Apelaciones V.08 2023-07-14
+              </p>
+            </div>
+          </a>
         </div>
 
         <p className="text-sm text-gray-500 mt-3 italic">

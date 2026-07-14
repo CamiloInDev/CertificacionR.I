@@ -41,7 +41,7 @@ export default function Home() {
   const [slide, setSlide] = useState(0)
 
   useEffect(() => {
-    const delays = [8000, 5000, 5000]
+    const delays = [10000, 5000, 5000]
     const id = setInterval(() => setSlide((s) => (s + 1) % 3), delays[slide])
     return () => clearInterval(id)
   }, [slide])
