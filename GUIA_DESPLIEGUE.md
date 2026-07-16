@@ -7,7 +7,7 @@
 | Frontend     | React 19 + TypeScript + Vite 8 + Tailwind v4           |
 | Backend      | Python 3.12+ / FastAPI + Uvicorn                       |
 | Base de datos| **Ninguna** (todo es archivos planos + SMTP)           |
-| Dependencias | `pip install -r requirements.txt` → 7 librerías ligeras|
+| Dependencias | `pip install -r requirements.txt` → 8 librerías ligeras|
 
 ---
 
@@ -510,3 +510,142 @@ curl http://<IP>/
 - **Imágenes equipos**: están en `backend/app/static/images/equipos/` pero **no** en `frontend/public/`. Hay que copiarlas manualmente al directorio servido (los pasos ya lo incluyen arriba)
 - **Google Fonts**: `index.html` carga `Plus Jakarta Sans` desde Google Fonts → la instancia necesita acceso a Internet
 - **Iframes**: las páginas de consulta de certificados cargan `intranet.ricertificacion.com` en iframes → necesita que ese dominio sea accesible desde el servidor
+
+
+Roadmap de Modernización — versión corta
+
+
+Norte: una sola plataforma, un solo estándar, un solo arnés para todos los devs.
+El éxito no es "usar Python", es que cualquier dev arranque un servicio nuevo en minutos y que en 5 años siga siendo mantenible.
+
+
+
+
+El arnés (esto es lo primero, y lo más importante)
+
+El "arnés" es tu golden path / camino pavimentado: una plantilla fija que TODOS usan. Ningún servicio nuevo se crea a mano. Se clona la plantilla.
+
+Backend — plantilla base FastAPI
+
+
+ Estructura de carpetas fija (routers / servicios / modelos / config)
+ Gestión de config y secretos por entorno (nunca en el código)
+ Auth estándar (JWT o, mejor, un IdP central para no repetir login en cada servicio)
+ Logging estructurado desde el minuto uno
+ Tests base + fixtures ya montados
+
+
+Frontend — plantilla base React + Vite
+
+
+ Estructura fija, router y cliente HTTP ya cableados
+ Sistema de diseño / componentes compartidos (que no cada dev invente botones)
+
+
+Estándares transversales (obligatorios en la plantilla)
+
+
+ Linter + formatter (ruff/black en Python, eslint/prettier en front) — no negociable
+ pre-commit hooks: nada llega al repo sin pasar formato + lint
+ Convención de commits y de nombres de ramas
+ Dockerfile estándar + docker-compose para levantar en local igual que en prod
+ README y ADR (registro de decisiones) como parte de la plantilla
+
+
+Cómo se distribuye: un repo template o cookiecutter. Un comando → proyecto nuevo con todo lo anterior ya puesto. Ese es el arnés.
+
+
+Fase 0 — Fundaciones (antes de migrar nada)
+
+
+ Reverse proxy / API gateway delante de IIS (sin desviar tráfico todavía)
+ Observabilidad: logs centralizados + métricas básicas (no puedes strangular lo que no puedes medir)
+ CI/CD mínimo funcionando (tests → build → deploy reproducible)
+ La plantilla base (el arnés) creada y probada con un servicio "hola mundo"
+
+
+Fase 1 — Conocer (con fecha límite: 3–4 semanas máx.)
+
+
+ Inventario AWS: cuántas EC2, qué hace cada una, red, storage
+ Inventario IIS: sitios, dominios, puertos, bindings, app pools, certificados
+ Base de datos: motor, tamaño, tablas, relaciones, SP, vistas, qué alimenta Power BI
+ Qué apps existen, cuáles siguen vivas, cuáles comparten backend/BD
+ Cómo se despliega, respalda y revierte hoy
+ Identificar los seams: módulos con frontera clara = primeros candidatos a migrar
+
+
+Fase 2 — Priorizar (no migres lo más difícil primero)
+
+
+ Matriz: dolor × riesgo × claridad de frontera
+ Elegir el primer slice: alto dolor, bajo riesgo, frontera limpia
+ Meta: primer slice en producción dentro de los primeros ~90 días
+
+
+Fase 3 — Seguridad: quick-wins (en paralelo, empieza ya)
+
+
+ Triaje de las ~100 vulnerabilidades por severidad + explotabilidad
+ En el proxy (sin tocar legacy): TLS moderno, cabeceras de seguridad, WAF, rate limiting
+ Sacar credenciales del código → gestor de secretos
+ Mapear dependencias .NET sin soporte → prioridad de reemplazo (son riesgo activo)
+
+
+Fase 4 — Arquitectura de transición
+
+
+ Servicios nuevos en FastAPI, detrás del proxy
+ Anti-corruption layer hacia la BD legacy (los servicios nuevos NO tocan las tablas caóticas directo)
+ Base de datos: envolver, no reescribir → vistas estables para proteger reportes/Power BI
+ CDC para sincronizar datos hacia servicios nuevos (evitar doble escritura)
+
+
+Fase 5 — Migrar slice por slice
+
+
+ Construir slice → desviar % de tráfico en el proxy → observar
+ Feature flags + rollback listo antes de cada corte
+ Confirmar → desviar más tráfico → decomisionar la ruta vieja
+ Repetir. Un contexto acotado a la vez adopta su dominio de datos.
+
+
+
+Reglas de oro (para no recaer en la deuda técnica)
+
+
+Ningún servicio fuera del arnés. Si necesita algo que el arnés no da, se mejora el arnés, no se hace excepción.
+Convivencia siempre. Nada se migra rompiendo lo viejo; el proxy permite volver atrás.
+La BD se envuelve antes de tocarse. Los reportes y Power BI se protegen con vistas.
+Seguridad y observabilidad primero, no al final.
+Descubrir y entregar en paralelo. Entender la plataforma no debe bloquear el primer slice.
+
+
+
+1. Instalar herramientas base
+Herramienta	Qué instala	Por qué
+Node.js 22+	node, npm	Frontend (React, Vite)
+Python 3.12+	python, pip	Backend (FastAPI)
+Git	git	Clonar el repo
+Descargalos desde:
+- https://nodejs.org (LTS)
+- https://www.python.org/downloads/ (marca "Add to PATH")
+- https://git-scm.com/download/win
+2. Clonar el proyecto
+git clone <URL_DEL_REPO>
+cd CertificacionR.I
+3. Instalar dependencias del Backend (Python)
+cd backend
+python -m venv venv
+.\venv\Scripts\Activate
+pip install -r requirements.txt
+4. Instalar dependencias del Frontend (Node)
+cd frontend
+npm install
+5. Probar localmente
+# Desde la raíz del proyecto:
+npm run dev
+Esto levanta simultáneamente:
+- Frontend en http://localhost:5173
+- Backend en http://localhost:8000
+Si en vez de desarrollo quieres producción, revisa el archivo GUIA_DESPLIEGUE.md que ya tienes en el proyecto — seguramente ahí está documentado el paso a paso para el deploy definitiva

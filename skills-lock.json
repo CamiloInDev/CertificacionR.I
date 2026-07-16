@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "skills": {
+    "appium": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/appium/SKILL.md",
+      "computedHash": "95836e43e502b603c2122638fb2475f4fcd31748131a1daf086cccaaec36c7f2"
+    },
+    "cypress": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/cypress/SKILL.md",
+      "computedHash": "c1a5ddee4e4b10e99fe63b84221ed567e5850cd6cf6d983f601adaf0aef7f5f0"
+    },
+    "detox": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/detox/SKILL.md",
+      "computedHash": "82d9ba74164e75a8972249928843295ccfeb875ef506bedcfb8958568076aba2"
+    },
+    "jest": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/jest/SKILL.md",
+      "computedHash": "f72bf6040eb4f9d7a1c7c1d1a4b6d4381e51c688d19e5eae8b4900f6dc5e366d"
+    },
+    "junit": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/junit/SKILL.md",
+      "computedHash": "96c5e770fe6b2d557841c9893844ea8dabe6667b4b2626dced2e8c7c7fc7fe81"
+    },
+    "playwright": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/playwright/SKILL.md",
+      "computedHash": "8294c55b50142ceb2062dd55edeccd1a3d1bc083de716f44194ac66f0e896c18"
+    },
+    "pytest": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/pytest/SKILL.md",
+      "computedHash": "ec648437e5d4c2d7f13830f4b43c499d288d36b422a8b8785a9de7a396d2a896"
+    },
+    "selenium": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/selenium/SKILL.md",
+      "computedHash": "8944980e6f228204e34980a7cae9a17a3e7a3360ecf9c1d835538e54fc73dbab"
+    },
+    "testing-best-practices": {
+      "source": "adewale/testing-best-practices",
+      "sourceType": "github",
+      "skillPath": "testing-best-practices/SKILL.md",
+      "computedHash": "9c96dda769df42fb0ef5bb3d6116b900381de6100f87b7f054741a29bc9c6cbb"
+    },
+    "vitest": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/vitest/SKILL.md",
+      "computedHash": "953e75627cf93b466907182320eaf40c13ebc4fcde8585f2c418393d96e8316e"
+    },
+    "webapp-testing": {
+      "source": "full-statck-skills/testing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/webapp-testing/SKILL.md",
+      "computedHash": "ab7060d636a1bc93ad42528e06e4bb8fe67ecee6543506c3d60b295e555850cc"
+    }
+  }
+}

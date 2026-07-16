@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     app_name: str = "R.I Certificación API"
     app_version: str = "1.0.0"
-    debug: bool = True
+    debug: bool = False
 
     smtp_host: str = "smtp.gmail.com"
     smtp_port: int = 587
@@ -12,7 +12,10 @@ class Settings(BaseSettings):
     smtp_password: str = ""
     email_to: str = "comercial@ricertificacion.com"
 
-    cors_origins: list[str] = ["*"]
+    cors_origins: list[str] = [
+        "https://ricertificacion.com",
+        "https://www.ricertificacion.com",
+    ]
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 

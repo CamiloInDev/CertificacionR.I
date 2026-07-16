@@ -37,6 +37,90 @@ function RotatingPhrase() {
   )
 }
 
+function UsersIcon() {
+  return (
+    <svg className="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+    </svg>
+  )
+}
+
+function SearchIcon() {
+  return (
+    <svg className="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+    </svg>
+  )
+}
+
+function DocumentIcon() {
+  return (
+    <svg className="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+    </svg>
+  )
+}
+
+function ChatIcon() {
+  return (
+    <svg className="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+    </svg>
+  )
+}
+
+type SplitSectionProps = {
+  id?: string
+  dark?: boolean
+  reverse?: boolean
+  eyebrow: string
+  icon: React.ReactNode
+  title: string
+  description: string
+  image: string
+  imageAlt: string
+  imagePosition?: string
+  children: React.ReactNode
+}
+
+function SplitSection({ id, dark, reverse, eyebrow, icon, title, description, image, imageAlt, imagePosition = 'object-center', children }: SplitSectionProps) {
+  return (
+    <motion.section id={id} className={`${dark ? 'bg-primary text-white' : 'bg-surface'} py-20 md:py-28`} {...fadeUp}>
+      <div className="max-w-7xl mx-auto px-4">
+        <div
+          className={`overflow-hidden rounded-3xl shadow-xl md:grid md:grid-cols-2 ${
+            dark ? 'bg-white/5 border border-white/10' : 'bg-white border border-gray-100'
+          }`}
+        >
+          <div className={`relative h-72 md:h-auto ${reverse ? 'md:order-2' : ''}`}>
+            <img src={image} alt={imageAlt} className={`absolute inset-0 w-full h-full object-cover ${imagePosition}`} />
+            <div
+              className={`absolute inset-0 bg-gradient-to-t ${
+                dark ? 'from-primary/85 via-primary/20 to-primary/5' : 'from-black/60 via-black/10 to-black/0'
+              }`}
+            />
+          </div>
+          <div className={`p-8 md:p-12 flex flex-col justify-center ${reverse ? 'md:order-1' : ''}`}>
+            <div className="inline-flex items-center gap-2.5 mb-5">
+              <span className="w-9 h-9 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+                {icon}
+              </span>
+              <span className={`text-xs font-bold uppercase tracking-[0.2em] ${dark ? 'text-secondary/80' : 'text-secondary'}`}>
+                {eyebrow}
+              </span>
+            </div>
+            <h2 className={`font-display text-3xl md:text-4xl mb-6 leading-tight ${dark ? 'text-white' : 'text-primary'}`}>
+              {title}
+            </h2>
+            <p className={`leading-relaxed mb-8 ${dark ? 'text-gray-300' : 'text-gray-600'}`}>{description}</p>
+            <div className="flex flex-wrap gap-3">{children}</div>
+          </div>
+        </div>
+      </div>
+    </motion.section>
+  )
+}
+
 export default function Home() {
   const [slide, setSlide] = useState(0)
 
@@ -209,95 +293,73 @@ export default function Home() {
       </section>
 
       {/* Conózcanos */}
-      <motion.section id="inicio1" className="bg-primary text-white py-20 md:py-28" {...fadeUp}>
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white/5 border border-white/10 md:grid md:grid-cols-2">
-            <div className="flex items-center justify-center p-6 md:p-0">
-              <img src="/static/images/1-1.png" alt="Equipo de trabajo R.I Certificación" className="w-full max-w-sm" />
-            </div>
-            <div className="p-8 md:p-12 flex flex-col justify-center">
-              <h2 className="font-display text-3xl md:text-4xl text-white mb-6 leading-tight">Conózcanos</h2>
-              <p className="text-gray-300 leading-relaxed mb-8">
-                Desde el 2014 trabajamos en el aseguramiento de las operaciones a través de la evaluación de
-                competencias de personal en izaje de cargas. Contamos con una amplia experiencia en certificación
-                de personas y equipos como: Montacargas, puente grúas, grúas móviles, plataformas de elevación,
-                excavadoras, cargadores y elementos de izaje.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link to="/conozcanos" className="bg-secondary text-primary font-bold px-6 py-2.5 hover:bg-secondary-light transition-colors text-sm">
-                  Más Información
-                </Link>
-                <a href="/static/brochures/BROCHURE-RI-CERTIFICACION-SECCION-PERSONAS-2023.pdf" target="_blank" rel="noopener noreferrer" className="border border-secondary text-secondary font-bold px-6 py-2.5 hover:bg-secondary hover:text-primary transition-colors text-sm">
-                  Brochure Personas
-                </a>
-                <a href="/static/brochures/BROCHURE-RI-CERTIFICACION-E-INSPECCION-2023.pdf" target="_blank" rel="noopener noreferrer" className="border border-secondary text-secondary font-bold px-6 py-2.5 hover:bg-secondary hover:text-primary transition-colors text-sm">
-                  Brochure Inspección
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      <SplitSection
+        id="inicio1"
+        dark
+        eyebrow="Sobre Nosotros"
+        icon={<UsersIcon />}
+        title="Conózcanos"
+        description="Desde el 2014 trabajamos en el aseguramiento de las operaciones a través de la evaluación de competencias de personal en izaje de cargas. Contamos con una amplia experiencia en certificación de personas y equipos como: Montacargas, puente grúas, grúas móviles, plataformas de elevación, excavadoras, cargadores y elementos de izaje."
+        image="/static/images/1-1.png"
+        imageAlt="Equipo de trabajo R.I Certificación"
+        imagePosition="object-top"
+      >
+        <Link to="/conozcanos" className="bg-secondary text-primary font-bold px-6 py-2.5 hover:bg-secondary-light transition-colors text-sm">
+          Más Información
+        </Link>
+        <a href="/static/brochures/BROCHURE-RI-CERTIFICACION-SECCION-PERSONAS-2023.pdf" target="_blank" rel="noopener noreferrer" className="border border-secondary text-secondary font-bold px-6 py-2.5 hover:bg-secondary hover:text-primary transition-colors text-sm">
+          Brochure Personas
+        </a>
+        <a href="/static/brochures/BROCHURE-RI-CERTIFICACION-E-INSPECCION-2023.pdf" target="_blank" rel="noopener noreferrer" className="border border-secondary text-secondary font-bold px-6 py-2.5 hover:bg-secondary hover:text-primary transition-colors text-sm">
+          Brochure Inspección
+        </a>
+      </SplitSection>
 
       {/* Consulta Certificados */}
-      <motion.section className="bg-surface py-20 md:py-28" {...fadeUp}>
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white border border-gray-200 md:grid md:grid-cols-2">
-            <div className="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
-              <h2 className="font-display text-3xl md:text-4xl text-primary mb-6 leading-tight">Consulta de Certificados</h2>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Consulte nuestra base de datos de certificados con su número de identificación y código de carné.
-              </p>
-              <a href="https://intranet.ricertificacion.com/_Modulos/ConsultaCarne" target="_blank" rel="noopener noreferrer" className="inline-block bg-secondary text-primary font-bold px-8 py-3 hover:bg-secondary-light transition-colors self-start">
-                Ingresar
-              </a>
-            </div>
-            <div className="flex items-center justify-center p-6 md:p-0 order-1 md:order-2">
-              <img src="/static/images/imagen-certificado4.jpg" alt="Certificado R.I" className="w-full max-w-sm" />
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      <SplitSection
+        reverse
+        eyebrow="Verificación"
+        icon={<SearchIcon />}
+        title="Consulta de Certificados"
+        description="Consulte nuestra base de datos de certificados con su número de identificación y código de carné."
+        image="/static/images/imagen-certificado4.jpg"
+        imageAlt="Certificado R.I"
+      >
+        <a href="https://intranet.ricertificacion.com/_Modulos/ConsultaCarne" target="_blank" rel="noopener noreferrer" className="inline-block bg-secondary text-primary font-bold px-8 py-3 hover:bg-secondary-light transition-colors self-start">
+          Ingresar
+        </a>
+      </SplitSection>
 
       {/* Políticas */}
-      <motion.section className="bg-primary text-white py-20 md:py-28" {...fadeUp}>
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white/5 border border-white/10 md:grid md:grid-cols-2">
-            <div className="flex items-center justify-center p-6 md:p-0">
-              <img src="/static/images/foto_politicas.jpg" alt="Políticas R.I Certificación" className="w-full max-w-sm" />
-            </div>
-            <div className="p-8 md:p-12 flex flex-col justify-center">
-              <h2 className="font-display text-3xl md:text-4xl text-white mb-6 leading-tight">Políticas</h2>
-              <p className="text-gray-300 leading-relaxed mb-8">
-                Consulte nuestras políticas, cláusulas y reglamentos de certificación e inspección.
-              </p>
-              <Link to="/politicas" className="bg-secondary text-primary font-bold px-6 py-2.5 hover:bg-secondary-light transition-colors self-start">
-                Leer más
-              </Link>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      <SplitSection
+        dark
+        eyebrow="Marco Normativo"
+        icon={<DocumentIcon />}
+        title="Políticas"
+        description="Consulte nuestras políticas, cláusulas y reglamentos de certificación e inspección."
+        image="/static/images/foto_politicas.jpg"
+        imageAlt="Políticas R.I Certificación"
+      >
+        <Link to="/politicas" className="bg-secondary text-primary font-bold px-6 py-2.5 hover:bg-secondary-light transition-colors self-start">
+          Leer más
+        </Link>
+      </SplitSection>
 
       {/* Queja o Apelación */}
-      <motion.section className="bg-surface py-20 md:py-28" {...fadeUp}>
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white border border-gray-200 md:grid md:grid-cols-2">
-            <div className="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
-              <h2 className="font-display text-3xl md:text-4xl text-primary mb-6 leading-tight">Queja o Apelación</h2>
-              <p className="text-gray-600 leading-relaxed mb-8 font-medium">
-                Ponemos a su disposición nuestro formato para registrar, atender y solucionar toda queja o apelación.
-              </p>
-              <Link to="/quejas" className="inline-block bg-secondary text-primary font-bold px-8 py-3 hover:bg-secondary-light transition-colors self-start">
-                Formulario
-              </Link>
-            </div>
-            <div className="flex items-center justify-center p-6 md:p-0 order-1 md:order-2">
-              <img src="/static/images/IMG-20210915-WA0002.jpg" alt="Formulario de queja o apelación" className="w-full max-w-sm" />
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      <SplitSection
+        reverse
+        eyebrow="Atención al Cliente"
+        icon={<ChatIcon />}
+        title="Queja o Apelación"
+        description="Ponemos a su disposición nuestro formato para registrar, atender y solucionar toda queja o apelación."
+        image="/static/images/IMG-20210915-WA0002.jpg"
+        imageAlt="Formulario de queja o apelación"
+        imagePosition="object-top"
+      >
+        <Link to="/quejas" className="inline-block bg-secondary text-primary font-bold px-8 py-3 hover:bg-secondary-light transition-colors self-start">
+          Formulario
+        </Link>
+      </SplitSection>
 
       {/* Contacto */}
       <section className="bg-primary text-white py-16">

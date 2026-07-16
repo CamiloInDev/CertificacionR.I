@@ -1,13 +1,22 @@
+import logging
 from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
+from slowapi import _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
 from app.config import settings
+from app.limiter import limiter
 from app.routers import health, contact
 
+logging.basicConfig(level=logging.DEBUG if settings.debug else logging.INFO)
+
 app = FastAPI(title=settings.app_name, version=settings.app_version)
+
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
