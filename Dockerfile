@@ -11,5 +11,21 @@ COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ .
 COPY --from=build /app/dist /app/static
+
+COPY <<-"EOF" /usr/local/bin/entrypoint.sh
+#!/bin/sh
+exec uvicorn app.main:app \
+  --host "${HOST:-0.0.0.0}" \
+  --port "${PORT:-8020}" \
+  --proxy-headers \
+  --forwarded-allow-ips "*"
+EOF
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+RUN addgroup --system --gid 1001 app && adduser --system --uid 1001 app
+RUN chown -R app:app /app
+USER app
+
 EXPOSE 8020
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8020", "--proxy-headers", "--forwarded-allow-ips", "*"]
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
