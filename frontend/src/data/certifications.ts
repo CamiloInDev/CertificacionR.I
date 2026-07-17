@@ -466,7 +466,7 @@ export const certifications: Certification[] = [
   {
     id: 'carga-terrestre',
     slug: 'carga-terrestre',
-    title: 'Operador para Disposición y Traslado de Carga en Transporte Terrestre',
+    title: 'Operador para disposición y traslado de carga en transporte de carga terrestre (mayor a 3.5 toneladas)',
     shortDesc: 'Determinar los requisitos del esquema de certificación que se deben cumplir para establecer la competencia de una persona en la disposición y traslado de carga en transporte de carga terrestre (mayor a 3.5 toneladas).',
     fullDesc: 'En INSTITUTO RI SAS SIGLA: GRUPO RI. Contamos con acreditación ONAC, vigente a la fecha, con código de acreditación 13-OCP-005 bajo la norma ISO/IEC 17024:2012.',
     normas: [
@@ -474,7 +474,7 @@ export const certifications: Certification[] = [
       'Trasladar carga de acuerdo con procedimientos técnicos y normativa de tránsito y transporte.',
     ],
     capacidad: 'N/A',
-    duracion: 'Se debe disponer del personal durante una jornada de 8 horas de un grupo máximo de cinco (5) candidatos, por jornada (donde se realizará pruebas teóricas y prácticas).',
+    duracion: 'Se debe disponer del personal durante una jornada de 8 horas de un grupo máximo de ocho (5) candidatos, por jornada (donde se realizará pruebas teóricas y prácticas).',
     hasPrereqs: true,
     prereqs: [
       {
@@ -482,7 +482,7 @@ export const certifications: Certification[] = [
         headers: ['Requisito', 'Documentos que evidencia cumplimiento del requisito', 'Cuándo se entrega', 'Mantenimiento', 'Ampliación', 'Renovación'],
         rows: [
           ['Tener mínimo 21 años', 'Entregar una copia del documento de identidad.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
-          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\n- Entregar certificado laboral evidenciando experiencia como operador de vehículo de carga mayores a 3.5 toneladas. Si el cargo es diferente, adjuntar el perfil del cargo, donde se evidencia la función de conducción de vehículos de carga mayores a 3.5 toneladas.\n- Para los casos en que el solicitante sea independiente, la experiencia deberá acreditarse mediante una certificación laboral o de prestación de servicios expedida por un cliente, contratante o empresa para la cual haya prestado el servicio.\n- Certificado del curso básico obligatorio de capacitación para conductores de vehículos que transportan mercancías peligrosas, Decreto 1079 del 26 de mayo de 2015 en la sección 8 con intensidad de 60 horas y estar vigente en la plataforma SISCONMP (solo si se transportan mercancías peligrosas).', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
+          ['Documento que indique la experiencia de la persona en operación del equipo.', 'Opciones:\nExisten las siguientes opciones:\n- Entregar certificado laboral evidenciando experiencia como operador de vehículo de carga mayores a 3.5 toneladas. Si el cargo es diferente, adjuntar el perfil del cargo, donde se evidencia la función de conducción de vehículos de carga mayores a 3.5 toneladas.\n- Para los casos en que el solicitante sea independiente, la experiencia deberá acreditarse mediante una certificación laboral o de prestación de servicios expedida por un cliente, contratante o empresa para la cual haya prestado el servicio.\n- Certificado del curso básico obligatorio de capacitación para conductores de vehículos que transportan mercancías peligrosas, Decreto 1079 del 26 de mayo de 2015 en la sección 8 con intensidad de 60 horas y estar vigente en la plataforma SISCONMP (solo si se transportan mercancías peligrosas)', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Poseer licencia de conducción vigente de la categoría en la cual se va a certificar', 'Entregar una copia de la licencia de conducción vigente en la categoría a la que se presenta C2/C3.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
           ['Entregar el formato SOLICITUD EVALUACIÓN DE LA CONFORMIDAD', 'CP-RE-005 completamente diligenciado en su versión vigente.', 'Al aplicar la solicitud', 'SI', 'SI', 'SI'],
         ],
