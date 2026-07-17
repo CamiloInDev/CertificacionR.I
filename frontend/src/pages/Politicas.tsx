@@ -112,27 +112,6 @@ export default function Politicas() {
           al correo electrónico: comercial@ricertificacion.com.
         </p>
       </section>
-
-      <section className="max-w-4xl mx-auto px-4 pb-12">
-        <div className="bg-white rounded-lg shadow-md border border-gray-100 p-6 hover:shadow-xl transition-shadow">
-          <h2 className="text-xl font-bold text-primary mb-2 safety-stripe">
-            CP-RG-001 Reglamento de Certificación
-          </h2>
-          <p className="text-sm text-gray-500 mb-4">V.22 01/oct/2025</p>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Reglamento que establece las condiciones y requisitos para la certificación de personas
-            bajo la norma ISO/IEC 17024.
-          </p>
-          <a
-            href="/static/brochures/CP-RG-001-Reglamento-de-Certificacion-V.22.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-secondary text-primary font-bold px-6 py-2 rounded hover:bg-secondary-light transition-colors text-sm"
-          >
-            Descargar Reglamento
-          </a>
-        </div>
-      </section>
     </div>
   )
 }
