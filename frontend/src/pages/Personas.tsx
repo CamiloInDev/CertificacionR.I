@@ -296,24 +296,68 @@ export default function Personas() {
           </a>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md border border-gray-100 p-6 hover:shadow-xl transition-shadow mb-10">
-          <h2 className="text-xl font-bold text-primary mb-2 safety-stripe">
-            CP-RG-001 Reglamento de Certificación
-          </h2>
-          <p className="text-sm text-gray-500 mb-4">V.22 01/oct/2025</p>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Reglamento que establece las condiciones y requisitos para la certificación de personas
-            bajo la norma ISO/IEC 17024.
-          </p>
+        <div className="grid md:grid-cols-3 gap-4 mb-10">
           <a
             href="/static/brochures/CP-RG-001-Reglamento-de-Certificacion-V.22.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-secondary text-primary font-bold px-6 py-2 rounded hover:bg-secondary-light transition-colors text-sm"
+            className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
           >
-            Descargar Reglamento
+            <img
+              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
+              alt="PDF"
+              className="w-10 h-10 shrink-0 mt-1"
+            />
+            <div>
+              <p className="font-bold text-sm text-primary leading-snug">
+                CP-RG-001 Reglamento de Certificación
+              </p>
+              <p className="text-xs text-gray-500 mt-1">V.22 01/oct/2025</p>
+            </div>
+          </a>
+
+          <a
+            href="/static/brochures/CP-RE-005-Formato-Solicitud.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
+          >
+            <img
+              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
+              alt="PDF"
+              className="w-10 h-10 shrink-0 mt-1"
+            />
+            <div>
+              <p className="font-bold text-sm text-primary leading-snug">
+                CP-RE-005 Formato Solicitud Evaluación de la Conformidad y Autorización de Divulgación de Resultados
+              </p>
+              <p className="text-xs text-gray-500 mt-1">216.72 KB</p>
+            </div>
+          </a>
+
+          <a
+            href="/static/brochures/CP-PR-016-Quejas-y-apelaciones-V.08_2023-07-14.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
+          >
+            <img
+              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
+              alt="PDF"
+              className="w-10 h-10 shrink-0 mt-1"
+            />
+            <div>
+              <p className="font-bold text-sm text-primary leading-snug">
+                Procedimiento Quejas y Apelaciones V.08 2023-07-14
+              </p>
+            </div>
           </a>
         </div>
+
+        <p className="text-sm text-gray-500 -mt-6 mb-10 italic">
+          Para dar trámite a su solicitud descargue el documento PDF y envíelo luego de completar la información
+          al correo electrónico: comercial@ricertificacion.com.
+        </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, i) => (

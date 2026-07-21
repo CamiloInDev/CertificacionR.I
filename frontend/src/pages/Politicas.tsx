@@ -49,51 +49,6 @@ export default function Politicas() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 pb-12">
-        <div className="grid md:grid-cols-3 gap-4">
-          <a
-            href="/static/brochures/CP-RE-005-Formato-Solicitud.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
-          >
-            <img
-              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
-              alt="PDF"
-              className="w-10 h-10 shrink-0 mt-1"
-            />
-            <div>
-              <p className="font-bold text-sm text-primary leading-snug">
-                CP-RE-005 Formato Solicitud Evaluación de la Conformidad y Autorización de Divulgación de Resultados
-              </p>
-              <p className="text-xs text-gray-500 mt-1">216.72 KB</p>
-            </div>
-          </a>
-
-          <a
-            href="/static/brochures/CP-PR-016-Quejas-y-apelaciones-V.08_2023-07-14.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
-          >
-            <img
-              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
-              alt="PDF"
-              className="w-10 h-10 shrink-0 mt-1"
-            />
-            <div>
-              <p className="font-bold text-sm text-primary leading-snug">
-                Procedimiento Quejas y Apelaciones V.08 2023-07-14
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <p className="text-sm text-gray-500 mt-3 italic">
-          Para dar trámite a su solicitud descargue el documento PDF y envíelo luego de completar la información
-          al correo electrónico: comercial@ricertificacion.com.
-        </p>
-      </section>
     </div>
   )
 }
