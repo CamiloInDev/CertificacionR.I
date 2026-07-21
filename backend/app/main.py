@@ -46,6 +46,13 @@ if FRONTEND_DIR.exists():
     async def serve_frontend(full_path: str):
         if full_path.startswith("api/"):
             return JSONResponse({"detail": "Not Found"}, status_code=404)
+        candidate = (FRONTEND_DIR / full_path).resolve()
+        if (
+            full_path
+            and FRONTEND_DIR.resolve() in candidate.parents
+            and candidate.is_file()
+        ):
+            return FileResponse(str(candidate))
         index = FRONTEND_DIR / "index.html"
         if index.exists():
             return FileResponse(str(index))
