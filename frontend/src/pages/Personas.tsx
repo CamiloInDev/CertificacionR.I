@@ -11,6 +11,21 @@ interface Policy {
   content: React.ReactNode
 }
 
+function PdfIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="w-10 h-10 shrink-0 mt-1" aria-hidden="true">
+      <path
+        fill="#e2574c"
+        d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6H6z"
+      />
+      <path fill="#f2a19a" d="M14 2v6h6z" />
+      <text x="12" y="17.5" textAnchor="middle" fontSize="6.5" fontWeight="700" fill="#fff">
+        PDF
+      </text>
+    </svg>
+  )
+}
+
 const policies: Policy[] = [
   {
     id: 'quejas',
@@ -303,11 +318,7 @@ export default function Personas() {
             rel="noopener noreferrer"
             className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
           >
-            <img
-              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
-              alt="PDF"
-              className="w-10 h-10 shrink-0 mt-1"
-            />
+            <PdfIcon />
             <div>
               <p className="font-bold text-sm text-primary leading-snug">
                 CP-RG-001 Reglamento de Certificación
@@ -322,11 +333,7 @@ export default function Personas() {
             rel="noopener noreferrer"
             className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
           >
-            <img
-              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
-              alt="PDF"
-              className="w-10 h-10 shrink-0 mt-1"
-            />
+            <PdfIcon />
             <div>
               <p className="font-bold text-sm text-primary leading-snug">
                 CP-RE-005 Formato Solicitud Evaluación de la Conformidad y Autorización de Divulgación de Resultados
@@ -341,11 +348,7 @@ export default function Personas() {
             rel="noopener noreferrer"
             className="bg-white rounded-lg shadow-md border border-gray-100 p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
           >
-            <img
-              src="https://ricertificacion.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg"
-              alt="PDF"
-              className="w-10 h-10 shrink-0 mt-1"
-            />
+            <PdfIcon />
             <div>
               <p className="font-bold text-sm text-primary leading-snug">
                 Procedimiento Quejas y Apelaciones V.08 2023-07-14
